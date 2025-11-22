@@ -3,18 +3,26 @@
 // Theme Toggle
 function initThemeToggle() {
   const themeToggle = document.getElementById('theme-toggle');
+  const themeToggleMobile = document.getElementById('theme-toggle-mobile');
   const html = document.documentElement;
   
   // Check for saved theme preference or default to light mode
   const currentTheme = localStorage.getItem('theme') || 'light';
   html.classList.toggle('dark', currentTheme === 'dark');
   
+  const toggleTheme = () => {
+    html.classList.toggle('dark');
+    const theme = html.classList.contains('dark') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+  };
+  
   if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      const theme = html.classList.contains('dark') ? 'dark' : 'light';
-      localStorage.setItem('theme', theme);
-    });
+    themeToggle.addEventListener('click', toggleTheme);
+  }
+  
+  // Sync mobile theme toggle
+  if (themeToggleMobile) {
+    themeToggleMobile.addEventListener('click', toggleTheme);
   }
 }
 
@@ -155,10 +163,43 @@ function initContactForm() {
       const data = Object.fromEntries(formData);
       
       // Show success message (in production, this would send to backend)
-      alert('Thank you for your message! We will get back to you soon.');
+      showToast('Thank you for your message! We will get back to you soon.', 'success');
       form.reset();
     });
   }
+}
+
+// Toast Notification System
+function showToast(message, type = 'info') {
+  // Remove existing toasts
+  const existingToast = document.querySelector('.toast-notification');
+  if (existingToast) {
+    existingToast.remove();
+  }
+  
+  // Create toast element
+  const toast = document.createElement('div');
+  toast.className = `toast-notification fixed bottom-8 right-8 px-6 py-4 rounded-lg shadow-2xl transition-all duration-300 z-50 ${
+    type === 'success' ? 'bg-green-500 text-white' : 
+    type === 'error' ? 'bg-red-500 text-white' : 
+    'bg-blue-500 text-white'
+  }`;
+  toast.textContent = message;
+  toast.style.transform = 'translateY(200%)';
+  
+  // Add to page
+  document.body.appendChild(toast);
+  
+  // Animate in
+  setTimeout(() => {
+    toast.style.transform = 'translateY(0)';
+  }, 10);
+  
+  // Remove after 5 seconds
+  setTimeout(() => {
+    toast.style.transform = 'translateY(200%)';
+    setTimeout(() => toast.remove(), 300);
+  }, 5000);
 }
 
 // Language Dropdown
