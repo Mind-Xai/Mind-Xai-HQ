@@ -1,0 +1,21 @@
+{
+  "name": "mind-xai-website",
+  "version": "1.0.0",
+  "description": "Mind-Xai Global Automation Platform - Professional Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./docs/css/input.css -o ./docs/css/output.css --watch",
+    "build": "npx tailwindcss -i ./docs/css/input.css -o ./docs/css/output.css --minify",
+    "serve": "python3 -m http.server 8000 --directory docs"
+  },
+  "keywords": [
+    "automation",
+    "ai",
+    "mind-xai"
+  ],
+  "author": "Mind-Xai Systems",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

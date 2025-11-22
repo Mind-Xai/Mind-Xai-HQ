@@ -7,6 +7,20 @@
 
 ---
 
+## 🌐 Official Website
+
+Visit our professional website: **[mind-xai.github.io/mindx-ai](https://mind-xai.github.io/mindx-ai/)**
+
+### Features:
+- 🎨 Modern, responsive design with dark/light mode
+- 🌍 Multi-language support (EN, ES, FR, DE, ZH)
+- 📊 Real-time global server dashboard
+- 💼 Career opportunities and case studies
+- 📱 Progressive Web App (PWA) enabled
+- ⚡ Optimized for performance and SEO
+
+---
+
 ## 🌐 About The Project
 **Mind-Xai** is a next-generation "Robotic AI" system designed to automate, fix, and optimize workflows at 50x speed. It operates as a **Master Controller**, ensuring system health and data synchronization without human intervention.
 
@@ -19,6 +33,34 @@
 
 ---
 
+## 🚀 Website Development
+
+The website is built with modern technologies:
+- **Frontend**: HTML5, Tailwind CSS, Vanilla JavaScript
+- **Build**: Node.js, npm
+- **Deployment**: GitHub Pages with automated CI/CD
+- **Features**: PWA, i18n, Dark Mode, Responsive Design
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Build CSS
+npm run build
+
+# Development mode (watch)
+npm run dev
+
+# Serve locally
+npm run serve
+```
+
+Visit the [docs/README.md](docs/README.md) for detailed website documentation.
+
+---
+
 ### 📡 Live System Logs
 * **Controller:** MasterBot.ps1 (Running)
 * **Location:** Mind-Xai HQ
@@ -27,4 +69,13 @@
 > *"When I use technology in a new way, I discover something new in my nature."*
 
 ---
+
+## 📚 Documentation
+
+- [Website Documentation](docs/README.md)
+- [Deployment Guide](DEPLOYMENT.md)
+- [Security Policy](SECURITY.md)
+
+---
+
 © 2025 Mind-Xai Systems. All Rights Reserved.
