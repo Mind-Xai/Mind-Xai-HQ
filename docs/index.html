@@ -20,6 +20,13 @@
   
   <title>Mind-Xai - Global Automation Platform</title>
   
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0ea5e9">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mind-Xai">
+  
   <!-- Tailwind CSS -->
   <link rel="stylesheet" href="css/output.css">
   
@@ -440,6 +447,21 @@
     document.getElementById('theme-toggle-mobile')?.addEventListener('click', function() {
       document.getElementById('theme-toggle').click();
     });
+  </script>
+  
+  <!-- Service Worker Registration for PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful:', registration.scope);
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed:', err);
+          });
+      });
+    }
   </script>
 </body>
 </html>
