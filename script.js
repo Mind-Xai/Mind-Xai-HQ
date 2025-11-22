@@ -103,7 +103,7 @@ function updateStatusPage() {
             }
         })
         .catch(error => {
-            console.log('Status file not found, using default message');
+            console.error('Failed to load status file:', error);
         });
 }
 
