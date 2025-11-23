@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mind-Xai System Status - Real-time monitoring and performance metrics">
+    <title>Status | Mind-Xai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>MIND-XAI</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="status.html" class="active">Status</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Status Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1><i class="fas fa-heartbeat"></i> System Status</h1>
+            <p>Real-time monitoring and performance metrics</p>
+            <div class="status-timestamp">
+                Last updated: <span id="lastUpdate">--</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overall Status -->
+    <section class="overall-status">
+        <div class="container">
+            <div class="status-banner operational">
+                <div class="status-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="status-info">
+                    <h2>All Systems Operational</h2>
+                    <p id="statusMessage">Testing Global Speed - Mind-Xai is Watching.</p>
+                </div>
+                <div class="status-uptime">
+                    <div class="uptime-badge">
+                        <span class="uptime-value" id="uptimeValue">99.99%</span>
+                        <span class="uptime-label">Uptime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Metrics -->
+    <section class="system-metrics">
+        <div class="container">
+            <h2 class="section-title">Key Performance Metrics</h2>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-gauge-high"></i>
+                    </div>
+                    <div class="metric-data">
+                        <div class="metric-value" id="speedMetric">50x</div>
+                        <div class="metric-label">Speed Optimization</div>
+                        <div class="metric-status online">Optimal</div>
+                    </div>
+                    <div class="metric-chart">
+                        <div class="chart-bar" style="height: 100%"></div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="metric-data">
+                        <div class="metric-value" id="serverStatus">100%</div>
+                        <div class="metric-label">Server Availability</div>
+                        <div class="metric-status online">Online</div>
+                    </div>
+                    <div class="metric-chart">
+                        <div class="chart-bar" style="height: 100%"></div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="metric-data">
+                        <div class="metric-value" id="latencyMetric">
+                            <span class="loading-pulse">...</span>
+                        </div>
+                        <div class="metric-label">Global Latency</div>
+                        <div class="metric-status online">Excellent</div>
+                    </div>
+                    <div class="metric-chart">
+                        <div class="chart-bar" style="height: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <div class="metric-data">
+                        <div class="metric-value" id="syncStatus">Active</div>
+                        <div class="metric-label">Global Sync</div>
+                        <div class="metric-status online">Running</div>
+                    </div>
+                    <div class="metric-chart">
+                        <div class="chart-bar" style="height: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component Status -->
+    <section class="component-status">
+        <div class="container">
+            <h2 class="section-title">Component Status</h2>
+            
+            <div class="components-list">
+                <div class="component-item">
+                    <div class="component-info">
+                        <div class="component-icon">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <div class="component-details">
+                            <h3>MasterBot Controller</h3>
+                            <p>Core automation system</p>
+                        </div>
+                    </div>
+                    <div class="component-health">
+                        <span class="health-indicator operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </span>
+                        <span class="component-uptime">100% uptime</span>
+                    </div>
+                </div>
+
+                <div class="component-item">
+                    <div class="component-info">
+                        <div class="component-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="component-details">
+                            <h3>Git Synchronization</h3>
+                            <p>Cloud backup and version control</p>
+                        </div>
+                    </div>
+                    <div class="component-health">
+                        <span class="health-indicator operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </span>
+                        <span class="component-uptime">100% uptime</span>
+                    </div>
+                </div>
+
+                <div class="component-item">
+                    <div class="component-info">
+                        <div class="component-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="component-details">
+                            <h3>Monitoring Dashboard</h3>
+                            <p>Grafana and Prometheus</p>
+                        </div>
+                    </div>
+                    <div class="component-health">
+                        <span class="health-indicator operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </span>
+                        <span class="component-uptime">99.99% uptime</span>
+                    </div>
+                </div>
+
+                <div class="component-item">
+                    <div class="component-info">
+                        <div class="component-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="component-details">
+                            <h3>Global Server Network</h3>
+                            <p>Multi-region deployment</p>
+                        </div>
+                    </div>
+                    <div class="component-health">
+                        <span class="health-indicator operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </span>
+                        <span class="component-uptime">99.99% uptime</span>
+                    </div>
+                </div>
+
+                <div class="component-item">
+                    <div class="component-info">
+                        <div class="component-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="component-details">
+                            <h3>Data Storage</h3>
+                            <p>Cloud storage and backup</p>
+                        </div>
+                    </div>
+                    <div class="component-health">
+                        <span class="health-indicator operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </span>
+                        <span class="component-uptime">100% uptime</span>
+                    </div>
+                </div>
+
+                <div class="component-item">
+                    <div class="component-info">
+                        <div class="component-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="component-details">
+                            <h3>Security Systems</h3>
+                            <p>Protection and monitoring</p>
+                        </div>
+                    </div>
+                    <div class="component-health">
+                        <span class="health-indicator operational">
+                            <i class="fas fa-circle"></i> Operational
+                        </span>
+                        <span class="component-uptime">100% uptime</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Status -->
+    <section class="regional-status">
+        <div class="container">
+            <h2 class="section-title">Global Server Status</h2>
+            
+            <div class="regions-grid">
+                <div class="region-card">
+                    <div class="region-flag">🇺🇸</div>
+                    <h3>North America</h3>
+                    <div class="region-metrics">
+                        <div class="region-metric">
+                            <span class="metric-label">Status</span>
+                            <span class="metric-value online">Online</span>
+                        </div>
+                        <div class="region-metric">
+                            <span class="metric-label">Latency</span>
+                            <span class="metric-value">45ms</span>
+                        </div>
+                        <div class="region-metric">
+                            <span class="metric-label">Uptime</span>
+                            <span class="metric-value">99.99%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <div class="region-flag">🇪🇺</div>
+                    <h3>Europe</h3>
+                    <div class="region-metrics">
+                        <div class="region-metric">
+                            <span class="metric-label">Status</span>
+                            <span class="metric-value online">Online</span>
+                        </div>
+                        <div class="region-metric">
+                            <span class="metric-label">Latency</span>
+                            <span class="metric-value">38ms</span>
+                        </div>
+                        <div class="region-metric">
+                            <span class="metric-label">Uptime</span>
+                            <span class="metric-value">100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <div class="region-flag">🇯🇵</div>
+                    <h3>Asia Pacific</h3>
+                    <div class="region-metrics">
+                        <div class="region-metric">
+                            <span class="metric-label">Status</span>
+                            <span class="metric-value online">Online</span>
+                        </div>
+                        <div class="region-metric">
+                            <span class="metric-label">Latency</span>
+                            <span class="metric-value">52ms</span>
+                        </div>
+                        <div class="region-metric">
+                            <span class="metric-label">Uptime</span>
+                            <span class="metric-value">99.98%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="region-card">
+                    <div class="region-flag">🇧🇷</div>
+                    <h3>South America</h3>
+                    <div class="region-metrics">
+                        <div class="region-metric">
+                            <span class="metric-label">Status</span>
+                            <span class="metric-value online">Online</span>
+                        </div>
+                        <div class="region-metric">
+                            <span class="metric-label">Latency</span>
+                            <span class="metric-value">68ms</span>
+                        </div>
+                        <div class="region-metric">
+                            <span class="metric-label">Uptime</span>
+                            <span class="metric-value">99.95%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status History -->
+    <section class="status-history">
+        <div class="container">
+            <h2 class="section-title">30-Day Uptime History</h2>
+            <div class="uptime-chart">
+                <div class="chart-days">
+                    <!-- Chart bars will be generated by JavaScript -->
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-color operational"></span>
+                        <span class="legend-label">100% Uptime</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color degraded"></span>
+                        <span class="legend-label">Partial Outage</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color outage"></span>
+                        <span class="legend-label">Outage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mind-Xai Systems. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
